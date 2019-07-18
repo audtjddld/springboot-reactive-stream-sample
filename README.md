@@ -18,11 +18,13 @@ SampleApplication의 thread는 1개로 고정한 뒤 webFlux를 이용하여 동
 
 `GET /call`-> `GET /inter/api` -> `GET /exter/api` -> return
 
-해당 케이스 관련 부하 테스트는 `ConcurrentTest.java` class를 조회하면된다.
+해당 케이스 관련 부하 테스트는 `ConcurrentTest.java` 를 실행시키면 된다.
 
 
 2번 케이스
 
 `GET /call`-> `GET /inter/api` -> `GET /exter/api` -> `GET /error/api` -> return
+
+해당 케이스 관련 부하 테스트는 `LoadTestIncludeErrorAPI.java` 를 실행시키면 된다.
 
 > error api는 3번 마다 오류를 발생시킴. 이때 retry가 있을 때와 없을 때 어떤 결과로 나타나는지 확인이 가능하다.
