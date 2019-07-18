@@ -21,6 +21,9 @@ SampleApplication의 thread는 1개로 고정한 뒤 webFlux를 이용하여 동
 해당 케이스 관련 부하 테스트는 `ConcurrentTest.java` 를 실행시키면 된다.
 ![이미지](test1.png)
 
+동작하는 thread 개수는 1개다.
+![이미지](sample-application-thread.png)
+
 2번 케이스
 
 `GET /call`-> `GET /inter/api` -> `GET /exter/api` -> `GET /error/api` -> return
